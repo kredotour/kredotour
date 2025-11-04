@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KREDO TOUR — Alina Zheleznova</title>
+  <meta name="description" content="ALINA ZHELEZNOVA · Travel Agent · KREDO TOUR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand:#0C3C84;
+      --text:#ffffff;
+      --muted: rgba(255,255,255,.8);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+    }
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url('kredo_bg.png') center/cover no-repeat fixed;
+      z-index: -2;
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.45) 100%);
+      z-index: -1;
+    }
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: min(680px, 94vw);
+      text-align: center;
+      backdrop-filter: blur(4px);
+    }
+    .brand {
+      font-weight: 700;
+      font-size: clamp(28px, 5vw, 42px);
+      letter-spacing: .5px;
+      margin: 0 0 6px 0;
+    }
+    .role {
+      font-size: clamp(13px, 2.6vw, 16px);
+      color: var(--muted);
+      margin: 0 0 16px 0;
+    }
+    .tagline {
+      font-size: clamp(13px, 2.6vw, 16px);
+      margin-bottom: 28px;
+      color: var(--text);
+      opacity: .95;
+    }
+    .buttons {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 1fr;
+      margin: 0 auto 24px auto;
+      width: min(520px, 100%);
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 18px;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      border: 2px solid rgba(255,255,255,.75);
+      color: #fff;
+      transition: transform .06s ease, background-color .2s ease;
+      background: rgba(12,60,132,.9);
+    }
+    .btn.secondary {
+      background: transparent;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: rgba(255,255,255,.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <main class="wrap">
+    <section class="card" role="main">
+      <h1 class="brand">ALINA ZHELEZNOVA</h1>
+      <p class="role">TRAVEL AGENT · KREDO TOUR</p>
+      <p class="tagline">SEE THE WORLD WITH US</p>
+
+      <div class="buttons">
+        <a class="btn" href="tel:+79182662389">📞 Позвонить</a>
+        <a class="btn secondary" href="https://wa.me/79182662389" target="_blank" rel="noopener">💬 Написать в WhatsApp</a>
+        <a class="btn secondary" href="https://instagram.com/ali_itsme" target="_blank" rel="noopener">✈️ Instagram: @ali_itsme</a>
+      </div>
+
+      <footer>© 2025 KREDO TOUR</footer>
+    </section>
+  </main>
+</body>
+</html>

@@ -62,26 +62,32 @@
       opacity: .95;
     }
     .buttons {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: 1fr;
-      margin: 0 auto 24px auto;
-      width: min(520px, 100%);
-    }
-    .btn {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;   /* кнопки в колонку */
+  align-items: center;      /* выравнивание по центру */
+  gap: 12px;                /* одинаковый промежуток */
+  margin: 0 auto 24px auto;
+  width: 100%;              /* растягиваем контейнер */
+  max-width: 520px;         /* ограничиваем максимальную ширину */
+}
+
+.btn {
+  display: block;
+  width: 100%;              /* все кнопки одинаковой ширины */
+  text-align: center;
   padding: 14px 18px;
   text-decoration: none;
   border-radius: 12px;
   font-weight: 600;
   border: 2px solid rgba(255,255,255,.75);
   color: #fff;
-  background: transparent; /* делаем прозрачной */
+  background: transparent;
   transition: transform .06s ease, background-color .2s ease;
 }
+
 .btn:hover {
   transform: translateY(-1px);
-  background: rgba(255,255,255,.15); /* лёгкий полупрозрачный фон при наведении */
+  background: rgba(255,255,255,.15);
 }
     footer {
       margin-top: 20px;
